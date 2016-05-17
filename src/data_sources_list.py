@@ -114,7 +114,7 @@ class DataSourcesList:
             self.data_sources[ds.id] = ds
 
         except Exception, e:
-            error_message = 'INI file can\'t be parsed: ' + e.message
+            error_message = 'metadata.ini file in %s can\'t be parsed: %s' % (root, e.message)
             QgsMessageLog.logMessage(error_message, level=QgsMessageLog.CRITICAL)
 
 
